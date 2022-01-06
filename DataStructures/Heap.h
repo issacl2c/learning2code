@@ -11,6 +11,7 @@
 #define Heap_h
 
 #include <stdio.h>
+#include "Types.h"
 
 
 /* Exported Types */

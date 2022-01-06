@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Types.h"
 
 /* Exported Types */
 typedef struct BinaryTreeNode_T
