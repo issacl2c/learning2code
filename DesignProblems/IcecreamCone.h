@@ -41,6 +41,34 @@
 #ifndef IcecreamCone_h
 #define IcecreamCone_h
 
-#include <stdio.h>
+/* Some Definitions to scope the problem */
+#define MAX_CUSTOMERS (10)
+#define MANAGER_QUEUE_SIZE (2)
+#define MAX_CONES_PER_CUSTOMER (4)
+
+#include "Types.h"
+
+/* Ice cream cone type */
+typedef struct IcecreamCone_Cone_T
+{
+    unsigned int customerNum;
+    unsigned int coneNum;
+    boolean qualityAccepted;
+    boolean paymentAccepted;
+    boolean qualityCheckDone;
+}IcecreamCone_ConeType;
+
+#define QUEUE_ENTITY IcecreamCone_ConeType *
+
+/* Exported functions */
+/*------------------------------------------------------*/
+/* Ice Cream Store Function                             */
+/* Demonstrates the ice cream store functionality       */
+/* Expects:                                             */
+/* 1. Number of customers                               */
+/* Returns:                                             */
+/* Nothing                                              */
+/*------------------------------------------------------*/
+extern void IcecreamCone_Store(unsigned int numCustomers);
 
 #endif /* IcecreamCone_h */

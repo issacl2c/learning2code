@@ -13,8 +13,16 @@
 /* Exported Types */
 typedef unsigned int boolean;
 
+
+
+
+#ifndef TRUE
 #define TRUE (1)
+#endif
+
+#ifndef FALSE
 #define FALSE (0)
+#endif
 
 
 #endif /* Types_h */

@@ -9,13 +9,11 @@
 #ifndef Queue_h
 #define Queue_h
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "Types.h"
 
 /* Generic Types */
 #ifndef QUEUE_ENTITY
-#define QUEUE_ENTITY unsigned int
+#define QUEUE_ENTITY void*
 #endif
 
 /* Exported Types */
@@ -23,13 +21,11 @@ typedef struct Queue_ListElement_T
 {
     QUEUE_ENTITY entity;
     struct Queue_ListElement_T  *nextPtr;
-}QueueListElementType;
+}Queue_ListElementType;
 
 typedef struct Queue_List_T
 {
-    QueueListElementType        *list;
-    QueueListElementType        *getPtr;
-    QueueListElementType        *putPtr;
+    Queue_ListElementType        *list;
     unsigned int                currentSize;
 }Queue_ListType;
 
@@ -51,17 +47,18 @@ extern Queue_ListType *Queue_List_Init(Queue_ListType *queuePtr);
 /* Returns:                                             */
 /* Status of the insert                                 */
 /*------------------------------------------------------*/
-extern boolean *Queue_List_Insert(Queue_ListType *queuePtr, QUEUE_ENTITY *entity);
+extern boolean Queue_List_Insert(Queue_ListType *queuePtr, QUEUE_ENTITY entity);
 
 /*------------------------------------------------------*/
 /* Get an item from the list queue                      */
 /* Expects:                                             */
 /* 1: Pointer to the Queue                              */
+/* 2: Pointer to the entity                             */
 /* Returns:                                             */
-/* 1: Pointer to the entity                             */
-/* NOTE: Return NULL if nothing to get                  */
+/* 2: Pointer to the entity                             */
+/* Status of the extract                                */
 /*------------------------------------------------------*/
-extern QUEUE_ENTITY *Queue_List_Extract(Queue_ListType *queuePtr);
+extern QUEUE_ENTITY Queue_List_Extract(Queue_ListType *queuePtr);
 
 /*------------------------------------------------------*/
 /* Clear a Queue of list type                           */

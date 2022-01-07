@@ -10,6 +10,7 @@
 #include "./DataStructures/BinaryTree.h"
 #include "./DataStructures/Hash.h"
 #include "./DataStructures/Heap.h"
+#include "./DesignProblems/IcecreamCone.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -17,12 +18,14 @@ int main(int argc, const char * argv[]) {
     // Welcome over
     
     unsigned int application;
+    unsigned int customers;
     while (1)
     {
         printf("Choose the Application:\
                 \n1: Binary Tree Demo Application\
                 \n2: Hash Table Demo Application\
                 \n3: Heap Demo Application\
+                \n4: Ice Cream Cone Store Aplication\
                 \n7: Exit Operation\n\n");
         
         scanf("%d", &application);
@@ -43,6 +46,10 @@ int main(int argc, const char * argv[]) {
             case 3:
                 Heap_Demo();
                 break;
+            case 4:
+                printf("------------------ICE CREAM STORE DEMO-------------------\n. How many customers can enter the store? \n");
+                scanf("%d", &customers);
+                IcecreamCone_Store(customers);
             case 7:
                 printf("Thank you, bye bye!! \n\n");
                 break;

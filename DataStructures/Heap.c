@@ -20,7 +20,6 @@ void Heap_Demo(void)
     unsigned int operation = 0;
     unsigned int heapSize = 0,key = 0, attr = 0;
     unsigned int *arrayPtr = NULL;
-    HEAP_ENTRY myHeapEntryPtr = NULL;
     printf("HEAP DEMO APPLICATION\n\n");
     printf("This implements an Heap. The Keys are integer keys\n\n");
     while(1)
