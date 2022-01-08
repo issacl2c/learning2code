@@ -12,6 +12,7 @@
 #include "./DataStructures/Heap.h"
 #include "./DesignProblems/IcecreamCone.h"
 #include "./DesignProblems/MatrixRotation.h"
+#include "./DesignProblems/Sorts.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -28,6 +29,7 @@ int main(int argc, const char * argv[]) {
                 \n3: Heap Demo Application\
                 \n4: Ice Cream Cone Store Aplication\
                 \n5: Matrix Rotation Application\
+                \n6: Sorts Application\
                 \n7: Exit Operation\n\n");
         
         scanf("%d", &application);
@@ -52,8 +54,13 @@ int main(int argc, const char * argv[]) {
                 printf("------------------ICE CREAM STORE DEMO-------------------\n. How many customers can enter the store? \n");
                 scanf("%d", &customers);
                 IcecreamCone_Store(customers);
+                break;
             case 5:
                 MatrixRotation_Demo();
+                break;
+            case 6:
+                Sorts_Demo();
+                break;
             case 7:
                 printf("Thank you, bye bye!! \n\n");
                 break;
