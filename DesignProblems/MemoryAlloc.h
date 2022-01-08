@@ -11,8 +11,6 @@
  ASSUMPTIONS
  ------------
  - We are operating within the process space. There is a HEAP top defined, which can be obtained using HEAP_TOP.
- - The stack top is obtained using STACK_TOP.
- - We get the maximum size of unallocated heap at any point by STACK_TOP - HEAP_TOP.
  */
 
 /* Demonstrated Result:
@@ -26,9 +24,15 @@
  - If nothing is found, then - take new memory from the HEAP_TOP and insert into allocated tree.
  
  for a good reference point: look here: https://danluu.com/malloc-tutorial/
- This solution is better than the above : in 2 aspecs:
+ My solution is better than the above link in 2 aspects:
  --> the implementation of trees makes searching more efficient.
  --> The free block sizes are split to use only the required sections.
+ 
+ Improvements:
+ --> Make it thread safe.
+ 
+ Testing:
+ --> Need to test by replacing the C library stock functions. not done.
  */
 
 /* Exported types */

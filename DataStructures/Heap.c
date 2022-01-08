@@ -189,12 +189,12 @@ HeapAttrType Heap_GetMinValue(HEAP heapPtr)
         {
             heapPos[currPosition] = heapPos[heapPtr->currSize]; // Percolate last element horizontally left.
         }
+        heapPtr->currSize -= 1; // Decrement size
     }
     else
     {
         printf("ERROR : @Heap_GetMinValue : empty heap\n");
     }
-    heapPtr->currSize -= 1; // Decrement size
     
     return attr;
 }

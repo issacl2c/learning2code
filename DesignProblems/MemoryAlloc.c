@@ -185,7 +185,7 @@ void *MemoryAlloc_malloc(unsigned int size)
         /* IF none, allocate newly */
         memPtr = HEAP_TOP(memSize);
         /* Insert to allocated Tree */
-        memTree = MemoryAlloc_Tree_Insert((unsigned int)memPtr, (unsigned int)memSize, AllocatedMemoryTree, ALLOC_TREETYPE);
+        memTree = MemoryAlloc_Tree_Insert(memPtr, (unsigned int)memSize, AllocatedMemoryTree, ALLOC_TREETYPE);
     }
     
     return memPtr;
@@ -200,5 +200,5 @@ void MemoryAlloc_free(void *memPtr)
     memTree = MemoryAlloc_Tree_FindDelete((unsigned int)memPtr, &size, AllocatedMemoryTree);
     
     /* Insert the entry into the free tree*/
-    FreeMemoryTree = MemoryAlloc_Tree_Insert(size, (unsigned int)memPtr, FreeMemoryTree, FREE_TREETYPE);
+    FreeMemoryTree = MemoryAlloc_Tree_Insert(memPtr, size, FreeMemoryTree, FREE_TREETYPE);
 }

@@ -66,7 +66,7 @@ boolean Queue_List_Insert(Queue_ListType *queuePtr, QUEUE_ENTITY entity)
 /*------------------------------------------------------*/
 QUEUE_ENTITY Queue_List_Extract(Queue_ListType *queuePtr)
 {
-    QUEUE_ENTITY    returnEntity;
+    QUEUE_ENTITY    returnEntity = NULL;
     Queue_ListElementType *queueItemPtr = queuePtr->list->nextPtr;
     if ( (queuePtr != NULL)
         && (queuePtr->currentSize > 0) )
