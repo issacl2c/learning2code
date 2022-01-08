@@ -13,6 +13,7 @@
 #include "./DesignProblems/IcecreamCone.h"
 #include "./DesignProblems/MatrixRotation.h"
 #include "./DesignProblems/Sorts.h"
+#include "./DesignProblems/ReaderWriter.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -30,11 +31,12 @@ int main(int argc, const char * argv[]) {
                 \n4: Ice Cream Cone Store Aplication\
                 \n5: Matrix Rotation Application\
                 \n6: Sorts Application\
-                \n7: Exit Operation\n\n");
+                \n7: Reader Writer Demo Application\
+                \n8: Exit Operation\n\n");
         
         scanf("%d", &application);
         
-        if (application == 7)
+        if (application == 8)
         {
             printf("Thank you, bye bye!! \n\n");
             break;
@@ -62,6 +64,9 @@ int main(int argc, const char * argv[]) {
                 Sorts_Demo();
                 break;
             case 7:
+                ReaderWriter_Demo();
+                break;
+            case 8:
                 printf("Thank you, bye bye!! \n\n");
                 break;
             default:
