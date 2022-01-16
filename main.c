@@ -6,10 +6,10 @@
 //
 
 #include <stdio.h>
-#include <pthread.h>
 #include "./DataStructures/BinaryTree.h"
 #include "./DataStructures/Hash.h"
 #include "./DataStructures/Heap.h"
+#include "./DataStructures/Stack.h"
 #include "./DesignProblems/IcecreamCone.h"
 #include "./DesignProblems/MatrixRotation.h"
 #include "./DesignProblems/Sorts.h"
@@ -28,15 +28,16 @@ int main(int argc, const char * argv[]) {
                 \n1: Binary Tree Demo Application\
                 \n2: Hash Table Demo Application\
                 \n3: Heap Demo Application\
-                \n4: Ice Cream Cone Store Aplication\
-                \n5: Matrix Rotation Application\
-                \n6: Sorts Application\
-                \n7: Reader Writer Demo Application\
-                \n8: Exit Operation\n\n");
+                \n4: Stack Demo Application\
+                \n5: Ice Cream Cone Store Aplication\
+                \n6: Matrix Rotation Application\
+                \n7: Sorts Application\
+                \n8: Reader Writer Demo Application\
+                \n9: Exit Operation\n\n");
         
         scanf("%d", &application);
         
-        if (application == 8)
+        if (application == 9)
         {
             printf("Thank you, bye bye!! \n\n");
             break;
@@ -53,20 +54,23 @@ int main(int argc, const char * argv[]) {
                 Heap_Demo();
                 break;
             case 4:
+                Stack_Demo();
+                break;
+            case 5:
                 printf("------------------ICE CREAM STORE DEMO-------------------\n. How many customers can enter the store? \n");
                 scanf("%d", &customers);
                 IcecreamCone_Store(customers);
                 break;
-            case 5:
+            case 6:
                 MatrixRotation_Demo();
                 break;
-            case 6:
+            case 7:
                 Sorts_Demo();
                 break;
-            case 7:
+            case 8:
                 ReaderWriter_Demo();
                 break;
-            case 8:
+            case 9:
                 printf("Thank you, bye bye!! \n\n");
                 break;
             default:

@@ -88,7 +88,25 @@ extern BinaryTree_NodeType *BinaryTree_FindMinNode(BINARY_TREE treePtr);
 extern BinaryTree_NodeType *BinaryTree_FindMaxNode(BINARY_TREE treePtr);
 
 /*------------------------------------------------------*/
-/* Print nodes in a Binary Tree in order                */
+/* Print nodes in a Binary Tree Pre order                */
+/* Expects:                                             */
+/* 1: Tree HEAD pointer                                 */
+/* Returns:                                             */
+/* void                                                 */
+/*------------------------------------------------------*/
+extern void BinaryTree_PreOrderPrint(BINARY_TREE treePtr);
+
+/*------------------------------------------------------*/
+/* Print nodes in a Binary Tree Post order                */
+/* Expects:                                             */
+/* 1: Tree HEAD pointer                                 */
+/* Returns:                                             */
+/* void                                                 */
+/*------------------------------------------------------*/
+extern void BinaryTree_PostOrderPrint(BINARY_TREE treePtr);
+
+/*------------------------------------------------------*/
+/* Print nodes in a Binary In Post order                */
 /* Expects:                                             */
 /* 1: Tree HEAD pointer                                 */
 /* Returns:                                             */

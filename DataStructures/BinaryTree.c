@@ -29,6 +29,8 @@ void BinaryTree_Demo(void)
               \n4: Find Node with minimum value\
               \n5: Find Node with Max value\
               \n6: Print Binary Tree in Order\
+              \n7: Print Binary Tree Pre-Order\
+              \n8: Print Binary Tree Post-Order\
               \n7: Exit Operation\n\n");
         
         scanf("%d", &operation);
@@ -284,5 +286,42 @@ void BinaryTree_InOrderPrint(BINARY_TREE treePtr)
         BinaryTree_InOrderPrint(treePtr->leftNodePtr);
         printf("Key = %d, Attr = %d\n", treePtr->key, treePtr->attr);
         BinaryTree_InOrderPrint(treePtr->rightNodePtr);
+    }
+}
+
+/*------------------------------------------------------*/
+/* Print nodes in a Binary Tree Pre order                */
+/* Expects:                                             */
+/* 1: Tree HEAD pointer                                 */
+/* Returns:                                             */
+/* void                                                 */
+/*------------------------------------------------------*/
+void BinaryTree_PreOrderPrint(BINARY_TREE treePtr)
+{
+    while (treePtr != NULL)
+    {
+        /* Print node first */
+        printf("Key = %d, Attr = %d\n", treePtr->key, treePtr->attr);
+        BinaryTree_PreOrderPrint(treePtr->leftNodePtr);
+        BinaryTree_PreOrderPrint(treePtr->rightNodePtr);
+    }
+}
+
+/*------------------------------------------------------*/
+/* Print nodes in a Binary Tree Post order                */
+/* Expects:                                             */
+/* 1: Tree HEAD pointer                                 */
+/* Returns:                                             */
+/* void                                                 */
+/*------------------------------------------------------*/
+void BinaryTree_PostOrderPrint(BINARY_TREE treePtr)
+{
+    while (treePtr != NULL)
+    {
+        /* Print Children */
+        BinaryTree_PreOrderPrint(treePtr->leftNodePtr);
+        BinaryTree_PreOrderPrint(treePtr->rightNodePtr);
+        /* Print node last */
+        printf("Key = %d, Attr = %d\n", treePtr->key, treePtr->attr);
     }
 }

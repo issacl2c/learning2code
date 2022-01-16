@@ -14,9 +14,9 @@
 static void Sorts_Heap_Heapify(unsigned int *heapPtr, unsigned int index, unsigned int size)
 {
     unsigned int leftChild, rightChild, largest;
-    largest = index;
-    leftChild = index*2 + 1;
-    rightChild = index*2 + 2;
+    largest     = index;
+    leftChild   = index*2 + 1;
+    rightChild  = index*2 + 2;
     
     if ( (leftChild < size)
         && (heapPtr[leftChild] > heapPtr[largest]) )
